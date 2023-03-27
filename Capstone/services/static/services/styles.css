@@ -1,0 +1,114 @@
+#nav-buttons {
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#header {
+    padding: 20px;
+}
+
+.interact {
+    text-align: center;
+    width: 375px;
+    height: 275px;
+    border-radius: 24px;
+    padding: 40px;
+    border: 5px solid black;
+    font-size: 40px;
+}
+
+.d-sm-inline-flex {
+    margin: 40px;
+}
+
+#desc-body {
+    min-height: 400px;
+}
+
+.job-tile {
+    margin: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 120%;
+}
+
+.user-msg {
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+    height:100px;
+    border-radius: 30px;
+    padding: 20px;
+    border: 1px solid black;
+    font-size: 24px;
+}
+
+#application-form {
+    margin: 20px;
+    padding: 20px;
+}
+
+.postButton {
+    margin: 15px;
+    border: 1px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: #007bff; 
+}
+
+#no-elements {
+    margin: 15px;
+    padding: 15px;
+}
+
+.msgline {
+    margin: 1px;
+}
+
+.msgs {
+    padding: 10px;
+    min-height: 50px;
+    min-width: 100px;
+    border-radius: 20px;
+}
+
+#received {
+    float: left;
+    text-align: left;
+    color: white;
+    background-color: grey;
+}
+
+#sent {
+    float: right;
+    text-align: left;
+    color: white;
+    background-color: cornflowerblue;
+}
+
+#chat-box {
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#texts {
+    border: 1px solid black;
+    overflow: auto;
+    height: 600px;
+    width: 400px;
+        
+    display: flex;
+    flex-direction: column-reverse;
+}

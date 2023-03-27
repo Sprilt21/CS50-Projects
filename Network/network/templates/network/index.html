@@ -1,0 +1,25 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <h2 id='header'></h2>
+
+    {% if user.is_authenticated %}
+        <div id='new-post'>
+            <h4>New Post</h4>
+            <form id="post-form">
+                <textarea class="form-control" id="post-body"></textarea>
+                <input type="submit" class="btn btn-primary" value='Post'/>
+            </form>
+        </div>
+        <div id="profile-div">
+        </div>
+    {% endif %}
+
+    <div id='seeposts'></div>
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'services/layout.html' %} 
+{% load static %}
+
+{% block body %}
+    <h1 id="header"></h1>
+
+    <table id="nav-buttons">
+        <tr>
+            <td><div class="interact d-sm-inline-flex flex-wrap" id="cands-view">View Candidates</div></td>
+            <td><div class="interact d-sm-inline-flex flex-wrap" id="pm-view">View Private Messages</div></td>
+        </tr>
+        <tr>
+            <td><div class="interact d-sm-inline-flex flex-wrap" id="create">Create a Application</div></td>
+            <td><div class="interact d-sm-inline-flex flex-wrap" id="view-old">View Accepted Candidates</div></td>
+        </tr>
+    </table>
+
+    <div id="candidates"></div>
+    <div id="view-pms"></div>
+    <div id="pms">
+        <div id="chat-box">
+            <div id="texts"></div>
+            <form id="send-msg">
+                <input type="text" id="text-body" name="text-body" placeholder="Text Message">
+                <input type="submit" class="btn btn-primary"/>
+            </form>
+        </div>
+    </div>
+    <div id="create-app">
+        <form id="application-form">
+            <label for="price">Price per hour:</label>
+            <input type="number" id="price-form" name="price" step="0.01" min="0">
+            <textarea class="form-control" id="desc-body" placeholder="Job Description"></textarea>
+            <input type="submit" class="btn btn-primary"/>
+        </form>
+    </div>
+    <div id="accepted"></div>
+    
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'services/index.js' %}"></script>
+{% endblock %}

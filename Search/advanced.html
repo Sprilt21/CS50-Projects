@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+
+        <style>
+            .column1 {
+                float:left;
+                width: 13%;
+            }
+
+            .column2 {
+                float:left;
+                width:30%;
+                margin-top: 0px;
+            }
+
+            .row:after {
+             content: "";
+                display: table;
+                clear: both;
+            }
+
+            input {
+                margin-top: 18px;
+                
+            }
+
+            div > p {
+                font-size: 18px;
+            }
+
+            div > input {
+                width: 100%;
+            }
+
+            .numbers {
+                width: 249px;
+            }
+
+            #button {
+                background-color: #338DFF;
+                color: white;
+                width: 140px;
+                height: 30px;
+                position: relative;
+                left: 634px;
+                margin-top: 10px;
+            }
+
+            a {
+
+                float: right;
+                margin-right: 10px;
+            }
+
+            #heading {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <a href="index.html">Back to Google Search</a>
+        <div id="heading">Find pages with:</div>
+
+        <form action="https://google.com/search">
+            <div class = "row">
+                <div class = "column1">
+                    <p>all these words: </p>
+                    <p>this exact word or phrase: </p>
+                    <p>any of these words:</p>
+                    <p>none of these words:</p>
+                    <p>numbers ranging from: </p>
+                </div>
+                <div class = "column2">
+
+                    <input type="text" name="as_q"><br>
+                    <input type="text" name="as_epq"><br>
+                    <input type="text" name="as_oq"><br>
+                    <input type="text" name="as_eq"><br>
+                    
+                    <div style="display:table; width:100%">
+                        <input class="numbers" type="text" name="as_nlo">
+                        <div style="padding-left:6px; padding-right: 5px; text-align: center; width:10%; display:table-cell">to: </div>
+                        <input class="numbers" width="auto" type="text" name="as_nhi">
+                    </div>
+                </div>
+            </div>
+            <input id="button" type="submit" value="Advanced Search">
+        </form>
+    </body>
+</html>

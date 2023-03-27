@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+
+        <style>
+            #searchbar {
+                border-radius: 25px;
+                min-width: 600px;
+                min-height: 50px;
+                position: relative;
+                left: 600px;
+                top: 300px;
+                outline: 0;
+            }
+            #lucky {
+                min-width: 160px;
+                min-height: 40px;
+                position: relative;
+                left: 130px;
+                top: 375px;
+            }
+            #button {
+                min-width: 160px;
+                min-height: 40px;
+                position: relative;
+                left: 100px;
+                top: 375px;
+            }
+            a {
+                float: right;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="images.html">Google Images</a> 
+        <a href="advanced.html">Advanced Search</a>
+        <form action="https://google.com/search">
+            <input id="searchbar" type="text" name="q">
+            <input id="button" type="submit" value="Google Search">
+            <input id="lucky" type="submit" value="I'm Feeling Lucky" name="btnI">
+        </form>
+    </body>
+</html>

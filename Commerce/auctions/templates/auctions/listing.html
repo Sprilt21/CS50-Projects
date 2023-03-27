@@ -1,0 +1,48 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>{{ listing.title }}</h2>
+    
+    <p>Category: {{ listing.category }}</p><br>
+    {% if listing.image == "" %}
+        <p>No image provided.</p>
+    {% else %}
+        <img src="{{listing.image}}" width=800px height = 600px>
+    {% endif %}
+    <p>{{ listing.description }}</p><br>
+    <h3>Current Bid: ${{ listing.startingBid }}</h3>
+
+    <h4>Comments:</h4>
+        {% for comment in comments %}
+            <p>{{ comment }}</p>
+        {% endfor %}
+    {% if listing.closed == True %}
+        <h3>This auction is closed.</h3>
+    {% elif user.is_authenticated %}
+        {% if listing.title in listing.user.won %}
+            <h3>You have won this auction.</h3>
+        {% elif listing.title in listing.user.made %}
+            <h3>This is your auction.</h3>
+            {% if listing.closed == False %}
+                <form action="{% url 'close' name=listing.title %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit">Close Auction</button>
+                </form>
+            {% endif %}
+        {% else %}
+            <a class="nav-link" href="{% url 'bid' name=listing.title %}">Make Bid</a>
+        {% endif %}
+        <form action="{% url 'addWatchlist' name=listing.title %}" method="POST">
+            {% csrf_token %} 
+            <button type="submit">Add to Watchlist</button>
+        </form>
+        <h5>Add comment:</h5>
+        <form action="{% url 'item' name=listing.title %}" method="POST">
+            {% csrf_token %}
+            <table>
+            {{ form }} 
+            </table>
+            <input type="submit">
+        </form>
+    {% endif %}
+{% endblock %}
